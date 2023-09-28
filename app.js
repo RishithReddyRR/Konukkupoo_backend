@@ -6,7 +6,10 @@ const fileUpload = require("express-fileupload");
 require("dotenv").config({ path: "./config/.env" });
 const app = express();
 const { errorMiddleware } = require("./middleware/error");
-app.use(cors());
+app.use(cors({
+    origin: 'https://konukkupoo-frontend.vercel.app/',
+    credentials: true,
+}));
 app.use(express.json());
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
