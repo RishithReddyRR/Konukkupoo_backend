@@ -13,7 +13,7 @@ domain: "myapp.vercel.app",
 httpOnly: true
     };
   
-    res.status(statusCode).cookie("token", token, options).json({
+    res.status(statusCode).cookie("ver", token, options).json({
       success: true,
       user,
       token,
