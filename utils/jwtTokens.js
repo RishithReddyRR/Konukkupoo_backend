@@ -8,9 +8,10 @@ const sendToken = (user, statusCode, res) => {
       expires: new Date(
         Date.now() + process.env.COOKIE_EXPIRE * 24 * 60 * 60 * 1000
       ),
-      domain: '.vercel.app',
-        httpOnly:true,
-        secure: true 
+      sameSite : "none",
+    secure: true,
+domain: "myapp.vercel.app",
+httpOnly: true
     };
   
     res.status(statusCode).cookie("token", token, options).json({
