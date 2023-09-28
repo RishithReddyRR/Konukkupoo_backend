@@ -9,7 +9,7 @@ const sendToken = (user, statusCode, res) => {
         Date.now() + process.env.COOKIE_EXPIRE * 24 * 60 * 60 * 1000
       ),
       sameSite : "none",
-domain: "myapp.vercel.app",
+domain: "konukkupoo-frontend.vercel.app",
 httpOnly: true
     };
   
